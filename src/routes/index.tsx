@@ -4,12 +4,7 @@ import { useState, useCallback } from "react";
 import { IntroCard } from "@/components/quiz/IntroCard";
 import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { ResultCard } from "@/components/quiz/ResultCard";
-import {
-  QUESTIONS,
-  RPG_CLASSES,
-  getInitialScores,
-  getTopClasses,
-} from "@/lib/rpg-data";
+import { QUESTIONS, RPG_CLASSES, getInitialScores, getTopClasses } from "@/lib/rpg-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({

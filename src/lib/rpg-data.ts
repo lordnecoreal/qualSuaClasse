@@ -196,8 +196,14 @@ export const QUESTIONS: Question[] = [
     id: 1,
     text: "Em uma batalha, qual é a sua primeira escolha?",
     answers: [
-      { label: "Atacar de frente com toda a força", scores: { barbaro: 3, cavaleiro: 2, monge: 1 } },
-      { label: "Observar e encontrar a fraqueza do inimigo", scores: { ladino: 3, arqueiro: 2, elfo: 1 } },
+      {
+        label: "Atacar de frente com toda a força",
+        scores: { barbaro: 3, cavaleiro: 2, monge: 1 },
+      },
+      {
+        label: "Observar e encontrar a fraqueza do inimigo",
+        scores: { ladino: 3, arqueiro: 2, elfo: 1 },
+      },
       { label: "Lançar magia de longe", scores: { mago: 3, necromante: 2, xama: 1 } },
       { label: "Proteger aliados e curar feridos", scores: { paladino: 3, druida: 2, xama: 1 } },
     ],
@@ -257,9 +263,15 @@ export const QUESTIONS: Question[] = [
     text: "Qual seria seu papel em um grupo de heróis?",
     answers: [
       { label: "O líder que protege todos", scores: { paladino: 3, cavaleiro: 2, anao: 1 } },
-      { label: "O estrategista que planeja cada passo", scores: { mago: 3, ladino: 2, alquimista: 1 } },
+      {
+        label: "O estrategista que planeja cada passo",
+        scores: { mago: 3, ladino: 2, alquimista: 1 },
+      },
       { label: "O explorador que abre caminho", scores: { cacador: 3, arqueiro: 2, elfo: 1 } },
-      { label: "O motivador que mantém o espírito alto", scores: { bardo: 3, barbaro: 2, monge: 1 } },
+      {
+        label: "O motivador que mantém o espírito alto",
+        scores: { bardo: 3, barbaro: 2, monge: 1 },
+      },
     ],
   },
   {
@@ -267,9 +279,15 @@ export const QUESTIONS: Question[] = [
     text: "O que você faria com um artefato poderoso encontrado?",
     answers: [
       { label: "Usá-lo para proteger os outros", scores: { paladino: 3, cavaleiro: 2, xama: 1 } },
-      { label: "Estudá-lo para desvendar seus segredos", scores: { mago: 3, alquimista: 2, necromante: 1 } },
+      {
+        label: "Estudá-lo para desvendar seus segredos",
+        scores: { mago: 3, alquimista: 2, necromante: 1 },
+      },
       { label: "Vendê-lo por uma fortuna", scores: { ladino: 3, bardo: 2, anao: 1 } },
-      { label: "Devolvê-lo à natureza ou ao seu lugar de origem", scores: { druida: 3, elfo: 2, cacador: 1 } },
+      {
+        label: "Devolvê-lo à natureza ou ao seu lugar de origem",
+        scores: { druida: 3, elfo: 2, cacador: 1 },
+      },
     ],
   },
   {
@@ -286,8 +304,14 @@ export const QUESTIONS: Question[] = [
     id: 10,
     text: "Qual legenda você gostaria de deixar para trás?",
     answers: [
-      { label: "O guerreiro invencível que nunca recuou", scores: { barbaro: 3, cavaleiro: 2, monge: 1 } },
-      { label: "O sábio que desvendou os mistérios do mundo", scores: { mago: 3, alquimista: 2, necromante: 1 } },
+      {
+        label: "O guerreiro invencível que nunca recuou",
+        scores: { barbaro: 3, cavaleiro: 2, monge: 1 },
+      },
+      {
+        label: "O sábio que desvendou os mistérios do mundo",
+        scores: { mago: 3, alquimista: 2, necromante: 1 },
+      },
       { label: "O protetor que guardou a natureza", scores: { druida: 3, elfo: 2, cacador: 1 } },
       { label: "O herói que inspirou gerações", scores: { bardo: 3, paladino: 2, xama: 1 } },
     ],
@@ -295,10 +319,13 @@ export const QUESTIONS: Question[] = [
 ];
 
 export function getInitialScores(): Record<string, number> {
-  return RPG_CLASSES.reduce((acc, cls) => {
-    acc[cls.id] = 0;
-    return acc;
-  }, {} as Record<string, number>);
+  return RPG_CLASSES.reduce(
+    (acc, cls) => {
+      acc[cls.id] = 0;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
 }
 
 export function getTopClasses(scores: Record<string, number>): RpgClass[] {

@@ -18,10 +18,7 @@ export function ResultCard({ winner, runnerUps, scores, maxScore, onRestart }: R
 
   return (
     <Card className="w-full max-w-2xl overflow-hidden border-2 border-primary/20 parchment-texture shadow-2xl">
-      <div
-        className="h-3 w-full"
-        style={{ backgroundColor: winner.color }}
-      />
+      <div className="h-3 w-full" style={{ backgroundColor: winner.color }} />
       <CardHeader className="space-y-4 text-center">
         <div className="mx-flex mx-auto flex h-20 w-20 items-center justify-center rounded-full border-4 border-primary/20 bg-card shadow-lg">
           <Icon className="h-10 w-10" style={{ color: winner.color }} />
