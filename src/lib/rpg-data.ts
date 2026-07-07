@@ -11,7 +11,7 @@ import {
   Music,
   Sparkles,
   PawPrint,
-  Horse,
+  Pickaxe,
   Flame,
   FlaskConical,
   type LucideIcon,
