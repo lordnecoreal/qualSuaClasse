@@ -166,7 +166,7 @@ export const RPG_CLASSES: RpgClass[] = [
     description:
       "Você é a muralha entre o perigo e os inocentes. Treinado para a batalha e moldado pelo dever, carrega sua armadura com orgulho e enfrenta qualquer ameaça de frente.",
     strengths: ["Defesa pesada", "Combate montado", "Honra"],
-    icon: Horse,
+    icon: Pickaxe,
     color: "oklch(0.55 0.08 250)",
   },
   {
